@@ -22,7 +22,7 @@ module.exports = {
     }
 
     this.app = app;
-    this.quantityOptions = this.getConfig();
+    this.mathjsOptions = this.getConfig();
 
     if (isFastBoot()) {
       this.importFastBootDependencies(app);
@@ -49,11 +49,11 @@ module.exports = {
     }
 
     var vendor = this.treePaths.vendor;
-    var options = this.quantityOptions;
+    var options = this.mathjsOptions;
 
     app.import({
-      development: vendor + '/mathjs/mathjs.js',
-      production: vendor + '/mathjs/mathjs.js'
+      development: vendor + '/mathjs/dist/math.js',
+      production: vendor + '/mathjs/dist/math.min.js'
     }, { prepend: true });
   },
 
@@ -75,7 +75,7 @@ module.exports = {
       return publicTree;
     }
 
-    var options = this.quantityOptions;
+    var options = this.mathjsOptions;
     var trees = [];
 
     if (publicTree) {
@@ -95,7 +95,7 @@ module.exports = {
 
   treeForNodeVendor: function(vendorTree) {
     var trees = [];
-    var options = this.quantityOptions;
+    var options = this.mathjsOptions;
 
     if (vendorTree) {
       trees.push(vendorTree);
@@ -120,7 +120,7 @@ module.exports = {
 
   treeForBrowserVendor: function(vendorTree) {
     var trees = [];
-    var options = this.quantityOptions;
+    var options = this.mathjsOptions;
 
     if (vendorTree) {
       trees.push(vendorTree);

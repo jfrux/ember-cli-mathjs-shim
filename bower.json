@@ -1,4 +1,6 @@
 {
   "name": "ember-cli-mathjs-shim",
-  "dependencies": {}
+  "dependencies": {
+    "mathjs": "^3.10.1"
+  }
 }

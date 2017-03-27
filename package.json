@@ -29,7 +29,8 @@
     "chalk": "^1.1.1",
     "ember-cli-babel": "^5.0.0",
     "exists-sync": "0.0.4",
-    "lodash.defaults": "^4.1.0"
+    "lodash.defaults": "^4.1.0",
+    "mathjs": "^3.10.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
